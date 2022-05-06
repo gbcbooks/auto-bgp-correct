@@ -13,10 +13,12 @@ create_dir(){
 }
 
 download_file(){
-    curl -4 -s ${remotehost}/${scriptpath}/collect_data.sh -o ${workdir}/collect_data.sh
-    curl -4 -s ${remotehost}/${scriptpath}/target -o ${workdir}/target
-    curl -4 -s ${remotehost}/${scriptpath}/get_avg_5m_loss.sh -o ${workdir}/get_avg_5m_loss.sh
-    curl -4 -s ${remotehost}/${scriptpath}/get_avg_5m_delay.sh -o ${workdir}/get_avg_5m_delay.sh
+    # curl -4 -s ${remotehost}/${scriptpath}/collect_data.sh -o ${workdir}/collect_data.sh
+    # curl -4 -s ${remotehost}/${scriptpath}/target -o ${workdir}/target
+    # curl -4 -s ${remotehost}/${scriptpath}/get_avg_5m_loss.sh -o ${workdir}/get_avg_5m_loss.sh
+    # curl -4 -s ${remotehost}/${scriptpath}/get_avg_5m_delay.sh -o ${workdir}/get_avg_5m_delay.sh
+    cd /usr/local/scripts/
+    git clone https://github.com/gbcbooks/auto-bgp-correct.git
 }
 
 add_crontjob(){
